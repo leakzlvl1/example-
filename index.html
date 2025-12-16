@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: black;
+      color: white;
+      font-family: monospace;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    input {
+      margin-top: 20px;
+      padding: 10px;
+      font-size: 16px;
+      background: white;   /* key fix */
+      color: black;        /* key fix */
+      border: none;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="text">This text changes color</div>
+
+  <input
+    type="text"
+    placeholder='Enter a color (ex: Blue)'
+    oninput="changeColor(this.value)"
+  />
+
+  <script>
+    function changeColor(color) {
+      document.getElementById("text").style.color = color;
+    }
+  </script>
+
+</body>
+</html>
